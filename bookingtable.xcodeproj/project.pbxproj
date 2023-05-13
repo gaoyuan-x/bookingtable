@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		BC7935212A0C102100E65E2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7935202A0C102100E65E2F /* AppDelegate.swift */; };
-		BC7935232A0C102100E65E2F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7935222A0C102100E65E2F /* SceneDelegate.swift */; };
 		BC7935252A0C102100E65E2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7935242A0C102100E65E2F /* ViewController.swift */; };
-		BC7935282A0C102100E65E2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC7935262A0C102100E65E2F /* Main.storyboard */; };
 		BC79352A2A0C102300E65E2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC7935292A0C102300E65E2F /* Assets.xcassets */; };
 		BC79352D2A0C102300E65E2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC79352B2A0C102300E65E2F /* LaunchScreen.storyboard */; };
+		BC79355A2A0F6DC000E65E2F /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC7935562A0F6C9600E65E2F /* SnapKit.framework */; };
+		BC79355B2A0F6DC000E65E2F /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC7935562A0F6C9600E65E2F /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BC79355E2A0FC88400E65E2F /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC79355D2A0FC88400E65E2F /* SettingView.swift */; };
+		BC7935652A0FD88E00E65E2F /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7935642A0FD88E00E65E2F /* SettingController.swift */; };
+		BC7935672A10101300E65E2F /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7935662A10101300E65E2F /* BaseController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,19 +33,49 @@
 			remoteGlobalIDString = BC79351C2A0C102100E65E2F;
 			remoteInfo = bookingtable;
 		};
+		BC7935552A0F6C9600E65E2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC7935502A0F6C9600E65E2F /* SnapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EEBCC9D819CC627D0083B827;
+			remoteInfo = SnapKit;
+		};
+		BC7935572A0F6C9600E65E2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC7935502A0F6C9600E65E2F /* SnapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EEBCC9E219CC627E0083B827;
+			remoteInfo = "SnapKit Tests";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BC79355C2A0F6DC000E65E2F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BC79355B2A0F6DC000E65E2F /* SnapKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		BC79351D2A0C102100E65E2F /* bookingtable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bookingtable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC7935202A0C102100E65E2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BC7935222A0C102100E65E2F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BC7935242A0C102100E65E2F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BC7935272A0C102100E65E2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BC7935292A0C102300E65E2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC79352C2A0C102300E65E2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC79352E2A0C102300E65E2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC7935332A0C102300E65E2F /* bookingtableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bookingtableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC79353D2A0C102300E65E2F /* bookingtableUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bookingtableUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC7935502A0F6C9600E65E2F /* SnapKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SnapKit.xcodeproj; path = "../SnapKit-develop/SnapKit.xcodeproj"; sourceTree = "<group>"; };
+		BC79355D2A0FC88400E65E2F /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		BC7935642A0FD88E00E65E2F /* SettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
+		BC7935662A10101300E65E2F /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC79355A2A0F6DC000E65E2F /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,8 +107,11 @@
 		BC7935142A0C102100E65E2F = {
 			isa = PBXGroup;
 			children = (
+				BC7935612A0FD7ED00E65E2F /* Controller */,
+				BC7935502A0F6C9600E65E2F /* SnapKit.xcodeproj */,
 				BC79351F2A0C102100E65E2F /* bookingtable */,
 				BC79351E2A0C102100E65E2F /* Products */,
+				BC7935592A0F6DC000E65E2F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,15 +128,39 @@
 		BC79351F2A0C102100E65E2F /* bookingtable */ = {
 			isa = PBXGroup;
 			children = (
+				BC79355D2A0FC88400E65E2F /* SettingView.swift */,
 				BC7935202A0C102100E65E2F /* AppDelegate.swift */,
-				BC7935222A0C102100E65E2F /* SceneDelegate.swift */,
 				BC7935242A0C102100E65E2F /* ViewController.swift */,
-				BC7935262A0C102100E65E2F /* Main.storyboard */,
 				BC7935292A0C102300E65E2F /* Assets.xcassets */,
 				BC79352B2A0C102300E65E2F /* LaunchScreen.storyboard */,
 				BC79352E2A0C102300E65E2F /* Info.plist */,
 			);
 			path = bookingtable;
+			sourceTree = "<group>";
+		};
+		BC7935512A0F6C9600E65E2F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC7935562A0F6C9600E65E2F /* SnapKit.framework */,
+				BC7935582A0F6C9600E65E2F /* SnapKit Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC7935592A0F6DC000E65E2F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC7935612A0FD7ED00E65E2F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BC7935642A0FD88E00E65E2F /* SettingController.swift */,
+				BC7935662A10101300E65E2F /* BaseController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +173,7 @@
 				BC7935192A0C102100E65E2F /* Sources */,
 				BC79351A2A0C102100E65E2F /* Frameworks */,
 				BC79351B2A0C102100E65E2F /* Resources */,
+				BC79355C2A0F6DC000E65E2F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -192,6 +254,12 @@
 			mainGroup = BC7935142A0C102100E65E2F;
 			productRefGroup = BC79351E2A0C102100E65E2F /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BC7935512A0F6C9600E65E2F /* Products */;
+					ProjectRef = BC7935502A0F6C9600E65E2F /* SnapKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				BC79351C2A0C102100E65E2F /* bookingtable */,
@@ -201,6 +269,23 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		BC7935562A0F6C9600E65E2F /* SnapKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SnapKit.framework;
+			remoteRef = BC7935552A0F6C9600E65E2F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC7935582A0F6C9600E65E2F /* SnapKit Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SnapKit Tests.xctest";
+			remoteRef = BC7935572A0F6C9600E65E2F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		BC79351B2A0C102100E65E2F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
@@ -208,7 +293,6 @@
 			files = (
 				BC79352D2A0C102300E65E2F /* LaunchScreen.storyboard in Resources */,
 				BC79352A2A0C102300E65E2F /* Assets.xcassets in Resources */,
-				BC7935282A0C102100E65E2F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,9 +317,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC7935652A0FD88E00E65E2F /* SettingController.swift in Sources */,
+				BC79355E2A0FC88400E65E2F /* SettingView.swift in Sources */,
+				BC7935672A10101300E65E2F /* BaseController.swift in Sources */,
 				BC7935252A0C102100E65E2F /* ViewController.swift in Sources */,
 				BC7935212A0C102100E65E2F /* AppDelegate.swift in Sources */,
-				BC7935232A0C102100E65E2F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,14 +355,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BC7935262A0C102100E65E2F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BC7935272A0C102100E65E2F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BC79352B2A0C102300E65E2F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -413,7 +491,7 @@
 				INFOPLIST_FILE = bookingtable/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -440,7 +518,7 @@
 				INFOPLIST_FILE = bookingtable/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
