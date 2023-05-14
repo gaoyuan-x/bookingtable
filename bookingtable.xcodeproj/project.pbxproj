@@ -16,6 +16,8 @@
 		BC79355E2A0FC88400E65E2F /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC79355D2A0FC88400E65E2F /* SettingView.swift */; };
 		BC7935652A0FD88E00E65E2F /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7935642A0FD88E00E65E2F /* SettingController.swift */; };
 		BC7935672A10101300E65E2F /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7935662A10101300E65E2F /* BaseController.swift */; };
+		BC7935852A1172BF00E65E2F /* NaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7935842A1172BF00E65E2F /* NaViewController.swift */; };
+		BC7935872A1173C900E65E2F /* RVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7935862A1173C900E65E2F /* RVViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,8 @@
 		BC79355D2A0FC88400E65E2F /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		BC7935642A0FD88E00E65E2F /* SettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
 		BC7935662A10101300E65E2F /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
+		BC7935842A1172BF00E65E2F /* NaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaViewController.swift; sourceTree = "<group>"; };
+		BC7935862A1173C900E65E2F /* RVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RVViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,9 +132,7 @@
 		BC79351F2A0C102100E65E2F /* bookingtable */ = {
 			isa = PBXGroup;
 			children = (
-				BC79355D2A0FC88400E65E2F /* SettingView.swift */,
 				BC7935202A0C102100E65E2F /* AppDelegate.swift */,
-				BC7935242A0C102100E65E2F /* ViewController.swift */,
 				BC7935292A0C102300E65E2F /* Assets.xcassets */,
 				BC79352B2A0C102300E65E2F /* LaunchScreen.storyboard */,
 				BC79352E2A0C102300E65E2F /* Info.plist */,
@@ -157,8 +159,12 @@
 		BC7935612A0FD7ED00E65E2F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BC7935842A1172BF00E65E2F /* NaViewController.swift */,
 				BC7935642A0FD88E00E65E2F /* SettingController.swift */,
+				BC79355D2A0FC88400E65E2F /* SettingView.swift */,
+				BC7935242A0C102100E65E2F /* ViewController.swift */,
 				BC7935662A10101300E65E2F /* BaseController.swift */,
+				BC7935862A1173C900E65E2F /* RVViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -318,8 +324,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC7935652A0FD88E00E65E2F /* SettingController.swift in Sources */,
+				BC7935852A1172BF00E65E2F /* NaViewController.swift in Sources */,
 				BC79355E2A0FC88400E65E2F /* SettingView.swift in Sources */,
 				BC7935672A10101300E65E2F /* BaseController.swift in Sources */,
+				BC7935872A1173C900E65E2F /* RVViewController.swift in Sources */,
 				BC7935252A0C102100E65E2F /* ViewController.swift in Sources */,
 				BC7935212A0C102100E65E2F /* AppDelegate.swift in Sources */,
 			);
