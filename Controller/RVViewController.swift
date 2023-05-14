@@ -46,8 +46,11 @@ extension QIRestaurantViewController: UITableViewDataSource, UITableViewDelegate
         cell.dict = dataArr[indexPath.row]
         return cell
     }
-
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let ctl = RDViewController()
+        navigationController?.pushViewController(ctl, animated: true)
+    }
 }
 
 class QIRestaurantViewCell: UITableViewCell {
