@@ -1,8 +1,11 @@
 
 import UIKit
 
-class RDViewController: UIViewController {
-
+class RDViewController: UIViewController, CustomView {
+    func didB() {
+        let new = bookingViewController()
+        self.navigationController?.pushViewController(new, animated: true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -20,7 +23,8 @@ class RDViewController: UIViewController {
     }
     
     @objc private func bookingClick() {
-        let vi = QIDetermineView()
+        let vi = DetermineView()
+        vi.delegate = self
         vi.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         vi.backgroundColor = .white
         view.addSubview(vi)
@@ -76,13 +80,6 @@ extension RDViewController: UICollectionViewDelegate, UICollectionViewDataSource
         return cell
     }
     
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let vi = QIDetermineView()
-//        vi.frame = CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT)
-//        vi.backgroundColor = .white
-//        view.addSubview(vi)
-//    }
-    
 }
 
 class RestaurantDetailCell: UICollectionViewCell {
@@ -96,13 +93,13 @@ class RestaurantDetailCell: UICollectionViewCell {
     
     private func addUI() {
         let imgView = UIImageView(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.width))
-        imgView.image = UIImage(named: "西红柿炒鸡蛋")
+        imgView.image = UIImage(named: "egg")
         imgView.contentMode = .scaleToFill
         imgView.clipsToBounds = true
 
         self.contentView.addSubview(imgView)
         
-        let pricel = UILabel(frame: CGRect(x: 30, y: self.frame.width - 30, width: self.frame.width - 30, height: 30))
+        let pricel = UILabel(frame: CGRect(x: 120, y: self.frame.width - 30, width: self.frame.width - 30, height: 30))
         pricel.text = "$15"
         pricel.textColor = .red
         pricel.font = UIFont.systemFont(ofSize: 14)
@@ -124,9 +121,11 @@ class RestaurantDetailCell: UICollectionViewCell {
 }
 
 
-
-class QIDetermineView: UIView {
-    
+protocol CustomView: AnyObject{
+    func didB()
+}
+class DetermineView: UIView {
+    weak var delegate: (CustomView)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -158,11 +157,12 @@ class QIDetermineView: UIView {
         doneb.frame = CGRect(x: UIScreen.main.bounds.width * 0.7, y: UIScreen.main.bounds.height * 0.7, width: 70, height: 30)
         doneb.titleLabel?.font = UIFont.systemFont(ofSize: 13)
         doneb.setTitle("Yes", for: .normal)
+        doneb.setTitleColor(.black, for: .normal)
         doneb.layer.masksToBounds = true
         doneb.layer.borderColor = UIColor.black.cgColor
         doneb.layer.borderWidth = 1
         doneb.layer.cornerRadius = 3
-        doneb.addTarget(self, action: #selector(doneBtnClick), for: .touchUpInside)
+        doneb.addTarget(self, action: #selector(doneBtnClick(_:)), for: .touchUpInside)
         self.addSubview(doneb)
         
     }
@@ -170,10 +170,8 @@ class QIDetermineView: UIView {
     @objc func cancelBtnClick() {
         self.removeFromSuperview()
     }
-    @objc func doneBtnClick() {
-        
-
-        cancelBtnClick()
+    @IBAction func doneBtnClick(_ sender:UIButton) {
+        delegate?.didB()
     }
     
     required init?(coder: NSCoder) {

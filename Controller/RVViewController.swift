@@ -2,18 +2,25 @@
 
 import UIKit
 
-class QIRestaurantViewController: UIViewController {
+class RestaurantViewController: UIViewController {
     
     private var dataArr = [[String: String]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         dataArr = [
-            ["starNum": "5", "name": "1"],
+            ["starNum": "5", "name": "egg"],
             ["starNum": "3", "name": "2"],
             ["starNum": "2", "name": "3"],
             ["starNum": "4", "name": "4"],
             ["starNum": "1", "name": "5"],
+            ["starNum": "1", "name": "6"],
+            ["starNum": "1", "name": "7"],
+            ["starNum": "3", "name": "8"],
+            ["starNum": "5", "name": "9"],
+            ["starNum": "3", "name": "10"],
+            ["starNum": "1", "name": "11"],
+            ["starNum": "7", "name": "12"],
         ]
 
         view.addSubview(tableView)
@@ -30,7 +37,7 @@ class QIRestaurantViewController: UIViewController {
 
 }
 
-extension QIRestaurantViewController: UITableViewDataSource, UITableViewDelegate {
+extension RestaurantViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataArr.count
@@ -41,7 +48,7 @@ extension QIRestaurantViewController: UITableViewDataSource, UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = QIRestaurantViewCell()
+        let cell = RestaurantViewCell()
         cell.selectionStyle = .none
         cell.dict = dataArr[indexPath.row]
         return cell
@@ -53,7 +60,7 @@ extension QIRestaurantViewController: UITableViewDataSource, UITableViewDelegate
     }
 }
 
-class QIRestaurantViewCell: UITableViewCell {
+class RestaurantViewCell: UITableViewCell {
     
     private var leftImgView: UIImageView!
     private var rightL: UILabel!
